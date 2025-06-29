@@ -4,8 +4,6 @@ Beacons Pro is a lightweight iOS app that turns your iPhone into both an **iBeac
 
 <div align="center">
   <img src="https://img.shields.io/badge/iOS-13%2B-blue.svg" />
-  <img src="https://img.shields.io/github/license/yourusername/Beacons Pro" />
-  <img src="https://img.shields.io/github/stars/yourusername/Beacons Pro?style=social" />
 </div>
 
 ## 🚀 Features
@@ -17,6 +15,10 @@ Beacons Pro is a lightweight iOS app that turns your iPhone into both an **iBeac
 - ✅ Open source and ready for customization
 
 ## 📲 Demo
+![IMG_8212](https://github.com/user-attachments/assets/7c6a79b0-a7f6-4ac0-adf1-2b22a5936031)
+![resize_IMG_8215](https://github.com/user-attachments/assets/fcf3645f-b168-48c5-bd0c-ee0df78ab4f0)
+![resize_IMG_8214](https://github.com/user-attachments/assets/36ad4214-a894-4a31-88ed-53706465e0ce)
+![resize_IMG_8213](https://github.com/user-attachments/assets/42dad48e-6eec-4b86-a309-14556e2df3f0)
 
 
 
