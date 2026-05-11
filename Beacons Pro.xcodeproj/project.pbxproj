@@ -54,6 +54,7 @@
 		BF07D84B2FB1619100019F1B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D84A2FB1619100019F1B /* OnboardingView.swift */; };
 		BF07D84D2FB1619200019F1B /* BeaconRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D84C2FB1619200019F1B /* BeaconRadarView.swift */; };
 		BF07D84F2FB161D400019F1B /* BeaconContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D84E2FB161D400019F1B /* BeaconContextMenu.swift */; };
+		BF07D8522FB1666600019F1B /* AppStoreScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8512FB1666600019F1B /* AppStoreScreenshots.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		BF07D84A2FB1619100019F1B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BF07D84C2FB1619200019F1B /* BeaconRadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconRadarView.swift; sourceTree = "<group>"; };
 		BF07D84E2FB161D400019F1B /* BeaconContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconContextMenu.swift; sourceTree = "<group>"; };
+		BF07D8512FB1666600019F1B /* AppStoreScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshots.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 				BF07D7F12FB1472900019F1B /* Settings */,
 				BF07D7F22FB1472900019F1B /* Components */,
 				BF07D8492FB1616700019F1B /* Onboarding */,
+				BF07D8502FB165EB00019F1B /* Screenshots */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,6 +313,14 @@
 				BF07D84A2FB1619100019F1B /* OnboardingView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BF07D8502FB165EB00019F1B /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				BF07D8512FB1666600019F1B /* AppStoreScreenshots.swift */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +400,7 @@
 				BF07D80C2FB147C200019F1B /* ContentView.swift in Sources */,
 				BF07D8022FB1477800019F1B /* BeaconScannerService.swift in Sources */,
 				BF07D82A2FB14CF900019F1B /* PulsingDot.swift in Sources */,
+				BF07D8522FB1666600019F1B /* AppStoreScreenshots.swift in Sources */,
 				BF07D83E2FB14D9000019F1B /* GroupManagementSheet.swift in Sources */,
 				BF07D80E2FB147C300019F1B /* Theme.swift in Sources */,
 				BF07D81E2FB147E200019F1B /* SettingsTab.swift in Sources */,

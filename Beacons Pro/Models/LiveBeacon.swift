@@ -22,6 +22,19 @@ struct LiveBeacon: Identifiable {
         self.lastSeen = .now
     }
 
+    #if DEBUG
+    init(uuid: UUID, major: UInt16, minor: UInt16, rssi: Int, accuracy: Double, proximity: CLProximity) {
+        self.id = "\(uuid.uuidString)-\(major)-\(minor)"
+        self.beaconUUID = uuid
+        self.major = major
+        self.minor = minor
+        self.rssi = rssi
+        self.accuracy = accuracy
+        self.proximity = proximity
+        self.lastSeen = .now
+    }
+    #endif
+
     mutating func update(from clBeacon: CLBeacon) {
         self.rssi = clBeacon.rssi
         self.accuracy = clBeacon.accuracy
