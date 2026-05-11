@@ -9,49 +9,103 @@
 /* Begin PBXBuildFile section */
 		7A33F664226D3B670030E497 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A33F663226D3B670030E497 /* CoreLocation.framework */; };
 		7A33F666226D3B6C0030E497 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A33F665226D3B6C0030E497 /* CoreBluetooth.framework */; };
-		7A36939A2280F1A300CDE534 /* ConfigureBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3693992280F1A300CDE534 /* ConfigureBeaconViewController.swift */; };
-		7AAC02FB22683AC200726A68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAC02FA22683AC200726A68 /* AppDelegate.swift */; };
-		7AAC02FD22683AC200726A68 /* RangeBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAC02FC22683AC200726A68 /* RangeBeaconViewController.swift */; };
-		7AAC030022683AC200726A68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AAC02FE22683AC200726A68 /* Main.storyboard */; };
 		7AAC030222683AC300726A68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AAC030122683AC300726A68 /* Assets.xcassets */; };
-		7AAC030522683AC300726A68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AAC030322683AC300726A68 /* LaunchScreen.storyboard */; };
-		BF05B42026F9FC53003E81FA /* ShadowAndCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05B41F26F9FC53003E81FA /* ShadowAndCornerRadius.swift */; };
-		BF05B42226F9FC6E003E81FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05B42126F9FC6D003E81FA /* Constants.swift */; };
-		BF05B42626F9FD23003E81FA /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05B42526F9FD23003E81FA /* UIView.swift */; };
-		BF05B42926F9FDB1003E81FA /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05B42826F9FDB1003E81FA /* DashboardController.swift */; };
-		BF05B42C26F9FEAA003E81FA /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05B42B26F9FEAA003E81FA /* DashboardCell.swift */; };
-		BF05B42F26F9FF1C003E81FA /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05B42E26F9FF1C003E81FA /* DashboardViewModel.swift */; };
-		BF05B43126FA0297003E81FA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05B43026FA0297003E81FA /* BaseViewController.swift */; };
-		BF05B43326FA02CF003E81FA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF05B43226FA02CF003E81FA /* UIViewController+Extension.swift */; };
-		BF32B2D726FA066600A50D15 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32B2D626FA066600A50D15 /* DashboardModel.swift */; };
-		BF32B2DA26FA0D3300A50D15 /* EnterUUIDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32B2D926FA0D3300A50D15 /* EnterUUIDController.swift */; };
-		BF32B2DC26FA31A600A50D15 /* BeaconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32B2DB26FA31A600A50D15 /* BeaconCell.swift */; };
-		BF93B61D26FB81FF00F54098 /* SupportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93B61C26FB81FF00F54098 /* SupportController.swift */; };
+		BF07D7F62FB1474A00019F1B /* SavedBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D7F52FB1474A00019F1B /* SavedBeacon.swift */; };
+		BF07D7F82FB1474B00019F1B /* BeaconEncounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D7F72FB1474B00019F1B /* BeaconEncounter.swift */; };
+		BF07D7FA2FB1474C00019F1B /* BeaconGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D7F92FB1474C00019F1B /* BeaconGroup.swift */; };
+		BF07D7FC2FB1474D00019F1B /* BroadcastProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D7FB2FB1474D00019F1B /* BroadcastProfile.swift */; };
+		BF07D7FE2FB1475A00019F1B /* LiveBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D7FD2FB1475A00019F1B /* LiveBeacon.swift */; };
+		BF07D8002FB1475B00019F1B /* ProximityLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D7FF2FB1475B00019F1B /* ProximityLevel.swift */; };
+		BF07D8022FB1477800019F1B /* BeaconScannerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8012FB1477800019F1B /* BeaconScannerService.swift */; };
+		BF07D8042FB1479E00019F1B /* BeaconBroadcasterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8032FB1479E00019F1B /* BeaconBroadcasterService.swift */; };
+		BF07D8062FB1479F00019F1B /* HapticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8052FB1479F00019F1B /* HapticsService.swift */; };
+		BF07D8082FB147A000019F1B /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8072FB147A000019F1B /* ExportService.swift */; };
+		BF07D80A2FB147C100019F1B /* BeaconsProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8092FB147C100019F1B /* BeaconsProApp.swift */; };
+		BF07D80C2FB147C200019F1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D80B2FB147C200019F1B /* ContentView.swift */; };
+		BF07D80E2FB147C300019F1B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D80D2FB147C300019F1B /* Theme.swift */; };
+		BF07D8102FB147D200019F1B /* CLProximity+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D80F2FB147D200019F1B /* CLProximity+Extensions.swift */; };
+		BF07D8122FB147D300019F1B /* UUID+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8112FB147D300019F1B /* UUID+Formatting.swift */; };
+		BF07D8142FB147D400019F1B /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8132FB147D400019F1B /* Color+Theme.swift */; };
+		BF07D8162FB147D500019F1B /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8152FB147D500019F1B /* Date+Formatting.swift */; };
+		BF07D8182FB147DF00019F1B /* ScannerTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8172FB147DF00019F1B /* ScannerTab.swift */; };
+		BF07D81A2FB147E000019F1B /* BeaconsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8192FB147E000019F1B /* BeaconsTab.swift */; };
+		BF07D81C2FB147E100019F1B /* BroadcastTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D81B2FB147E100019F1B /* BroadcastTab.swift */; };
+		BF07D81E2FB147E200019F1B /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D81D2FB147E200019F1B /* SettingsTab.swift */; };
+		BF07D8222FB14CE400019F1B /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8212FB14CE400019F1B /* ScannerViewModel.swift */; };
+		BF07D8242FB14CF600019F1B /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8232FB14CF600019F1B /* EmptyStateView.swift */; };
+		BF07D8262FB14CF700019F1B /* BeaconSignalBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8252FB14CF700019F1B /* BeaconSignalBars.swift */; };
+		BF07D8282FB14CF800019F1B /* ProximityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8272FB14CF800019F1B /* ProximityBadge.swift */; };
+		BF07D82A2FB14CF900019F1B /* PulsingDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8292FB14CF900019F1B /* PulsingDot.swift */; };
+		BF07D82C2FB14CFA00019F1B /* ColorTagPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D82B2FB14CFA00019F1B /* ColorTagPicker.swift */; };
+		BF07D82E2FB14D1700019F1B /* RadarPulseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D82D2FB14D1700019F1B /* RadarPulseView.swift */; };
+		BF07D8302FB14D1800019F1B /* DiscoveredBeaconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D82F2FB14D1800019F1B /* DiscoveredBeaconRow.swift */; };
+		BF07D8322FB14D1900019F1B /* UUIDEntrySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8312FB14D1900019F1B /* UUIDEntrySheet.swift */; };
+		BF07D8342FB14D5000019F1B /* BeaconFleetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8332FB14D5000019F1B /* BeaconFleetViewModel.swift */; };
+		BF07D8362FB14D5200019F1B /* BeaconDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8352FB14D5200019F1B /* BeaconDetailViewModel.swift */; };
+		BF07D8382FB14D6400019F1B /* BeaconCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8372FB14D6400019F1B /* BeaconCardView.swift */; };
+		BF07D83A2FB14D6500019F1B /* RSSIChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8392FB14D6500019F1B /* RSSIChartView.swift */; };
+		BF07D83C2FB14D8E00019F1B /* BeaconDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D83B2FB14D8E00019F1B /* BeaconDetailView.swift */; };
+		BF07D83E2FB14D9000019F1B /* GroupManagementSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D83D2FB14D9000019F1B /* GroupManagementSheet.swift */; };
+		BF07D8402FB14D9100019F1B /* AddBeaconSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D83F2FB14D9100019F1B /* AddBeaconSheet.swift */; };
+		BF07D8422FB14DBE00019F1B /* BroadcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8412FB14DBE00019F1B /* BroadcastViewModel.swift */; };
+		BF07D8442FB14DD200019F1B /* BroadcastStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8432FB14DD200019F1B /* BroadcastStatusView.swift */; };
+		BF07D8462FB14DD300019F1B /* BroadcastProfileRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8452FB14DD300019F1B /* BroadcastProfileRow.swift */; };
+		BF07D8482FB14DD400019F1B /* BroadcastProfileSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8472FB14DD400019F1B /* BroadcastProfileSheet.swift */; };
+		BF07D84B2FB1619100019F1B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D84A2FB1619100019F1B /* OnboardingView.swift */; };
+		BF07D84D2FB1619200019F1B /* BeaconRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D84C2FB1619200019F1B /* BeaconRadarView.swift */; };
+		BF07D84F2FB161D400019F1B /* BeaconContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D84E2FB161D400019F1B /* BeaconContextMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A33F663226D3B670030E497 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7A33F665226D3B6C0030E497 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		7A3693992280F1A300CDE534 /* ConfigureBeaconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureBeaconViewController.swift; sourceTree = "<group>"; };
 		7AAC02F722683AC200726A68 /* Beacons Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beacons Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AAC02FA22683AC200726A68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7AAC02FC22683AC200726A68 /* RangeBeaconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeBeaconViewController.swift; sourceTree = "<group>"; };
-		7AAC02FF22683AC200726A68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7AAC030122683AC300726A68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7AAC030422683AC300726A68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AAC030622683AC300726A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF05B41F26F9FC53003E81FA /* ShadowAndCornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowAndCornerRadius.swift; sourceTree = "<group>"; };
-		BF05B42126F9FC6D003E81FA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		BF05B42526F9FD23003E81FA /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		BF05B42826F9FDB1003E81FA /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
-		BF05B42B26F9FEAA003E81FA /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
-		BF05B42E26F9FF1C003E81FA /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
-		BF05B43026FA0297003E81FA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		BF05B43226FA02CF003E81FA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		BF32B2D626FA066600A50D15 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
-		BF32B2D926FA0D3300A50D15 /* EnterUUIDController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterUUIDController.swift; sourceTree = "<group>"; };
-		BF32B2DB26FA31A600A50D15 /* BeaconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconCell.swift; sourceTree = "<group>"; };
-		BF93B61C26FB81FF00F54098 /* SupportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportController.swift; sourceTree = "<group>"; };
+		BF07D7F52FB1474A00019F1B /* SavedBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedBeacon.swift; sourceTree = "<group>"; };
+		BF07D7F72FB1474B00019F1B /* BeaconEncounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconEncounter.swift; sourceTree = "<group>"; };
+		BF07D7F92FB1474C00019F1B /* BeaconGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconGroup.swift; sourceTree = "<group>"; };
+		BF07D7FB2FB1474D00019F1B /* BroadcastProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastProfile.swift; sourceTree = "<group>"; };
+		BF07D7FD2FB1475A00019F1B /* LiveBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveBeacon.swift; sourceTree = "<group>"; };
+		BF07D7FF2FB1475B00019F1B /* ProximityLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximityLevel.swift; sourceTree = "<group>"; };
+		BF07D8012FB1477800019F1B /* BeaconScannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconScannerService.swift; sourceTree = "<group>"; };
+		BF07D8032FB1479E00019F1B /* BeaconBroadcasterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconBroadcasterService.swift; sourceTree = "<group>"; };
+		BF07D8052FB1479F00019F1B /* HapticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsService.swift; sourceTree = "<group>"; };
+		BF07D8072FB147A000019F1B /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		BF07D8092FB147C100019F1B /* BeaconsProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconsProApp.swift; sourceTree = "<group>"; };
+		BF07D80B2FB147C200019F1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BF07D80D2FB147C300019F1B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BF07D80F2FB147D200019F1B /* CLProximity+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLProximity+Extensions.swift"; sourceTree = "<group>"; };
+		BF07D8112FB147D300019F1B /* UUID+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UUID+Formatting.swift"; sourceTree = "<group>"; };
+		BF07D8132FB147D400019F1B /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
+		BF07D8152FB147D500019F1B /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatting.swift"; sourceTree = "<group>"; };
+		BF07D8172FB147DF00019F1B /* ScannerTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerTab.swift; sourceTree = "<group>"; };
+		BF07D8192FB147E000019F1B /* BeaconsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconsTab.swift; sourceTree = "<group>"; };
+		BF07D81B2FB147E100019F1B /* BroadcastTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastTab.swift; sourceTree = "<group>"; };
+		BF07D81D2FB147E200019F1B /* SettingsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTab.swift; sourceTree = "<group>"; };
+		BF07D8212FB14CE400019F1B /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		BF07D8232FB14CF600019F1B /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		BF07D8252FB14CF700019F1B /* BeaconSignalBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconSignalBars.swift; sourceTree = "<group>"; };
+		BF07D8272FB14CF800019F1B /* ProximityBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximityBadge.swift; sourceTree = "<group>"; };
+		BF07D8292FB14CF900019F1B /* PulsingDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingDot.swift; sourceTree = "<group>"; };
+		BF07D82B2FB14CFA00019F1B /* ColorTagPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTagPicker.swift; sourceTree = "<group>"; };
+		BF07D82D2FB14D1700019F1B /* RadarPulseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarPulseView.swift; sourceTree = "<group>"; };
+		BF07D82F2FB14D1800019F1B /* DiscoveredBeaconRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveredBeaconRow.swift; sourceTree = "<group>"; };
+		BF07D8312FB14D1900019F1B /* UUIDEntrySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDEntrySheet.swift; sourceTree = "<group>"; };
+		BF07D8332FB14D5000019F1B /* BeaconFleetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconFleetViewModel.swift; sourceTree = "<group>"; };
+		BF07D8352FB14D5200019F1B /* BeaconDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconDetailViewModel.swift; sourceTree = "<group>"; };
+		BF07D8372FB14D6400019F1B /* BeaconCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconCardView.swift; sourceTree = "<group>"; };
+		BF07D8392FB14D6500019F1B /* RSSIChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSIChartView.swift; sourceTree = "<group>"; };
+		BF07D83B2FB14D8E00019F1B /* BeaconDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconDetailView.swift; sourceTree = "<group>"; };
+		BF07D83D2FB14D9000019F1B /* GroupManagementSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupManagementSheet.swift; sourceTree = "<group>"; };
+		BF07D83F2FB14D9100019F1B /* AddBeaconSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBeaconSheet.swift; sourceTree = "<group>"; };
+		BF07D8412FB14DBE00019F1B /* BroadcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastViewModel.swift; sourceTree = "<group>"; };
+		BF07D8432FB14DD200019F1B /* BroadcastStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastStatusView.swift; sourceTree = "<group>"; };
+		BF07D8452FB14DD300019F1B /* BroadcastProfileRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastProfileRow.swift; sourceTree = "<group>"; };
+		BF07D8472FB14DD400019F1B /* BroadcastProfileSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastProfileSheet.swift; sourceTree = "<group>"; };
+		BF07D84A2FB1619100019F1B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BF07D84C2FB1619200019F1B /* BeaconRadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconRadarView.swift; sourceTree = "<group>"; };
+		BF07D84E2FB161D400019F1B /* BeaconContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconContextMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +143,11 @@
 			children = (
 				7AD381912268441800C79DC4 /* Supporting FIles */,
 				BF05B42326F9FC71003E81FA /* Utilities */,
-				BF32B2D426FA065500A50D15 /* Backend */,
-				BF05B41D26F9FBF8003E81FA /* FrontEnd */,
+				BF07D7E92FB1471300019F1B /* App */,
+				BF07D7EA2FB1471400019F1B /* Models */,
+				BF07D7EB2FB1471400019F1B /* ViewModels */,
+				BF07D7EC2FB1471400019F1B /* Services */,
+				BF07D7ED2FB1472200019F1B /* Views */,
 			);
 			path = "Beacons Pro";
 			sourceTree = "<group>";
@@ -107,58 +164,17 @@
 		7AD381912268441800C79DC4 /* Supporting FIles */ = {
 			isa = PBXGroup;
 			children = (
-				7AAC02FA22683AC200726A68 /* AppDelegate.swift */,
 				7AAC030122683AC300726A68 /* Assets.xcassets */,
 				7AAC030622683AC300726A68 /* Info.plist */,
 			);
 			path = "Supporting FIles";
 			sourceTree = "<group>";
 		};
-		BF05B41B26F9FBE5003E81FA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BF05B42A26F9FE99003E81FA /* Cells */,
-				BF05B41C26F9FBF2003E81FA /* CustomViews */,
-				7AAC030322683AC300726A68 /* LaunchScreen.storyboard */,
-				7AAC02FE22683AC200726A68 /* Main.storyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		BF05B41C26F9FBF2003E81FA /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-				BF05B41F26F9FC53003E81FA /* ShadowAndCornerRadius.swift */,
-			);
-			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		BF05B41D26F9FBF8003E81FA /* FrontEnd */ = {
-			isa = PBXGroup;
-			children = (
-				BF05B41E26F9FC0A003E81FA /* Controllers */,
-				BF05B41B26F9FBE5003E81FA /* Views */,
-			);
-			path = FrontEnd;
-			sourceTree = "<group>";
-		};
-		BF05B41E26F9FC0A003E81FA /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BF32B2D826FA0D2100A50D15 /* Alerts */,
-				BF05B43026FA0297003E81FA /* BaseViewController.swift */,
-				BF05B42726F9FDA1003E81FA /* Dashboard */,
-				7AAC02FC22683AC200726A68 /* RangeBeaconViewController.swift */,
-				7A3693992280F1A300CDE534 /* ConfigureBeaconViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		BF05B42326F9FC71003E81FA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				BF05B42426F9FD0E003E81FA /* Extensions */,
-				BF05B42126F9FC6D003E81FA /* Constants.swift */,
+				BF07D80D2FB147C300019F1B /* Theme.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -166,61 +182,134 @@
 		BF05B42426F9FD0E003E81FA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BF05B43226FA02CF003E81FA /* UIViewController+Extension.swift */,
-				BF05B42526F9FD23003E81FA /* UIView.swift */,
+				BF07D80F2FB147D200019F1B /* CLProximity+Extensions.swift */,
+				BF07D8112FB147D300019F1B /* UUID+Formatting.swift */,
+				BF07D8132FB147D400019F1B /* Color+Theme.swift */,
+				BF07D8152FB147D500019F1B /* Date+Formatting.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		BF05B42726F9FDA1003E81FA /* Dashboard */ = {
+		BF07D7E92FB1471300019F1B /* App */ = {
 			isa = PBXGroup;
 			children = (
-				BF05B42D26F9FF0E003E81FA /* ViewModel */,
-				BF05B42826F9FDB1003E81FA /* DashboardController.swift */,
+				BF07D8092FB147C100019F1B /* BeaconsProApp.swift */,
+				BF07D80B2FB147C200019F1B /* ContentView.swift */,
 			);
-			path = Dashboard;
+			path = App;
 			sourceTree = "<group>";
 		};
-		BF05B42A26F9FE99003E81FA /* Cells */ = {
+		BF07D7EA2FB1471400019F1B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BF05B42B26F9FEAA003E81FA /* DashboardCell.swift */,
-				BF32B2DB26FA31A600A50D15 /* BeaconCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		BF05B42D26F9FF0E003E81FA /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				BF05B42E26F9FF1C003E81FA /* DashboardViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		BF32B2D426FA065500A50D15 /* Backend */ = {
-			isa = PBXGroup;
-			children = (
-				BF32B2D526FA065B00A50D15 /* Models */,
-			);
-			path = Backend;
-			sourceTree = "<group>";
-		};
-		BF32B2D526FA065B00A50D15 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BF32B2D626FA066600A50D15 /* DashboardModel.swift */,
+				BF07D7F52FB1474A00019F1B /* SavedBeacon.swift */,
+				BF07D7F72FB1474B00019F1B /* BeaconEncounter.swift */,
+				BF07D7F92FB1474C00019F1B /* BeaconGroup.swift */,
+				BF07D7FB2FB1474D00019F1B /* BroadcastProfile.swift */,
+				BF07D7FD2FB1475A00019F1B /* LiveBeacon.swift */,
+				BF07D7FF2FB1475B00019F1B /* ProximityLevel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		BF32B2D826FA0D2100A50D15 /* Alerts */ = {
+		BF07D7EB2FB1471400019F1B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				BF32B2D926FA0D3300A50D15 /* EnterUUIDController.swift */,
-				BF93B61C26FB81FF00F54098 /* SupportController.swift */,
+				BF07D8212FB14CE400019F1B /* ScannerViewModel.swift */,
+				BF07D8332FB14D5000019F1B /* BeaconFleetViewModel.swift */,
+				BF07D8352FB14D5200019F1B /* BeaconDetailViewModel.swift */,
+				BF07D8412FB14DBE00019F1B /* BroadcastViewModel.swift */,
 			);
-			path = Alerts;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BF07D7EC2FB1471400019F1B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BF07D8012FB1477800019F1B /* BeaconScannerService.swift */,
+				BF07D8032FB1479E00019F1B /* BeaconBroadcasterService.swift */,
+				BF07D8052FB1479F00019F1B /* HapticsService.swift */,
+				BF07D8072FB147A000019F1B /* ExportService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BF07D7ED2FB1472200019F1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF07D7EE2FB1472800019F1B /* Scanner */,
+				BF07D7EF2FB1472800019F1B /* Beacons */,
+				BF07D7F02FB1472900019F1B /* Broadcast */,
+				BF07D7F12FB1472900019F1B /* Settings */,
+				BF07D7F22FB1472900019F1B /* Components */,
+				BF07D8492FB1616700019F1B /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF07D7EE2FB1472800019F1B /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				BF07D8172FB147DF00019F1B /* ScannerTab.swift */,
+				BF07D82D2FB14D1700019F1B /* RadarPulseView.swift */,
+				BF07D82F2FB14D1800019F1B /* DiscoveredBeaconRow.swift */,
+				BF07D8312FB14D1900019F1B /* UUIDEntrySheet.swift */,
+				BF07D84C2FB1619200019F1B /* BeaconRadarView.swift */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
+		BF07D7EF2FB1472800019F1B /* Beacons */ = {
+			isa = PBXGroup;
+			children = (
+				BF07D8192FB147E000019F1B /* BeaconsTab.swift */,
+				BF07D8372FB14D6400019F1B /* BeaconCardView.swift */,
+				BF07D8392FB14D6500019F1B /* RSSIChartView.swift */,
+				BF07D83B2FB14D8E00019F1B /* BeaconDetailView.swift */,
+				BF07D83D2FB14D9000019F1B /* GroupManagementSheet.swift */,
+				BF07D83F2FB14D9100019F1B /* AddBeaconSheet.swift */,
+			);
+			path = Beacons;
+			sourceTree = "<group>";
+		};
+		BF07D7F02FB1472900019F1B /* Broadcast */ = {
+			isa = PBXGroup;
+			children = (
+				BF07D81B2FB147E100019F1B /* BroadcastTab.swift */,
+				BF07D8432FB14DD200019F1B /* BroadcastStatusView.swift */,
+				BF07D8452FB14DD300019F1B /* BroadcastProfileRow.swift */,
+				BF07D8472FB14DD400019F1B /* BroadcastProfileSheet.swift */,
+			);
+			path = Broadcast;
+			sourceTree = "<group>";
+		};
+		BF07D7F12FB1472900019F1B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BF07D81D2FB147E200019F1B /* SettingsTab.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BF07D7F22FB1472900019F1B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BF07D8232FB14CF600019F1B /* EmptyStateView.swift */,
+				BF07D8252FB14CF700019F1B /* BeaconSignalBars.swift */,
+				BF07D8272FB14CF800019F1B /* ProximityBadge.swift */,
+				BF07D8292FB14CF900019F1B /* PulsingDot.swift */,
+				BF07D82B2FB14CFA00019F1B /* ColorTagPicker.swift */,
+				BF07D84E2FB161D400019F1B /* BeaconContextMenu.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BF07D8492FB1616700019F1B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BF07D84A2FB1619100019F1B /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,9 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AAC030522683AC300726A68 /* LaunchScreen.storyboard in Resources */,
 				7AAC030222683AC300726A68 /* Assets.xcassets in Resources */,
-				7AAC030022683AC200726A68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,44 +381,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF05B42226F9FC6E003E81FA /* Constants.swift in Sources */,
-				BF05B43326FA02CF003E81FA /* UIViewController+Extension.swift in Sources */,
-				BF93B61D26FB81FF00F54098 /* SupportController.swift in Sources */,
-				BF05B42026F9FC53003E81FA /* ShadowAndCornerRadius.swift in Sources */,
-				7AAC02FD22683AC200726A68 /* RangeBeaconViewController.swift in Sources */,
-				BF32B2D726FA066600A50D15 /* DashboardModel.swift in Sources */,
-				BF05B42F26F9FF1C003E81FA /* DashboardViewModel.swift in Sources */,
-				7AAC02FB22683AC200726A68 /* AppDelegate.swift in Sources */,
-				BF05B43126FA0297003E81FA /* BaseViewController.swift in Sources */,
-				BF05B42926F9FDB1003E81FA /* DashboardController.swift in Sources */,
-				BF05B42626F9FD23003E81FA /* UIView.swift in Sources */,
-				BF32B2DA26FA0D3300A50D15 /* EnterUUIDController.swift in Sources */,
-				BF05B42C26F9FEAA003E81FA /* DashboardCell.swift in Sources */,
-				7A36939A2280F1A300CDE534 /* ConfigureBeaconViewController.swift in Sources */,
-				BF32B2DC26FA31A600A50D15 /* BeaconCell.swift in Sources */,
+				BF07D83C2FB14D8E00019F1B /* BeaconDetailView.swift in Sources */,
+				BF07D8122FB147D300019F1B /* UUID+Formatting.swift in Sources */,
+				BF07D7FE2FB1475A00019F1B /* LiveBeacon.swift in Sources */,
+				BF07D8242FB14CF600019F1B /* EmptyStateView.swift in Sources */,
+				BF07D7F62FB1474A00019F1B /* SavedBeacon.swift in Sources */,
+				BF07D80C2FB147C200019F1B /* ContentView.swift in Sources */,
+				BF07D8022FB1477800019F1B /* BeaconScannerService.swift in Sources */,
+				BF07D82A2FB14CF900019F1B /* PulsingDot.swift in Sources */,
+				BF07D83E2FB14D9000019F1B /* GroupManagementSheet.swift in Sources */,
+				BF07D80E2FB147C300019F1B /* Theme.swift in Sources */,
+				BF07D81E2FB147E200019F1B /* SettingsTab.swift in Sources */,
+				BF07D8282FB14CF800019F1B /* ProximityBadge.swift in Sources */,
+				BF07D8382FB14D6400019F1B /* BeaconCardView.swift in Sources */,
+				BF07D8002FB1475B00019F1B /* ProximityLevel.swift in Sources */,
+				BF07D8062FB1479F00019F1B /* HapticsService.swift in Sources */,
+				BF07D8042FB1479E00019F1B /* BeaconBroadcasterService.swift in Sources */,
+				BF07D84F2FB161D400019F1B /* BeaconContextMenu.swift in Sources */,
+				BF07D8322FB14D1900019F1B /* UUIDEntrySheet.swift in Sources */,
+				BF07D8142FB147D400019F1B /* Color+Theme.swift in Sources */,
+				BF07D8422FB14DBE00019F1B /* BroadcastViewModel.swift in Sources */,
+				BF07D8182FB147DF00019F1B /* ScannerTab.swift in Sources */,
+				BF07D7FC2FB1474D00019F1B /* BroadcastProfile.swift in Sources */,
+				BF07D8222FB14CE400019F1B /* ScannerViewModel.swift in Sources */,
+				BF07D7F82FB1474B00019F1B /* BeaconEncounter.swift in Sources */,
+				BF07D7FA2FB1474C00019F1B /* BeaconGroup.swift in Sources */,
+				BF07D8462FB14DD300019F1B /* BroadcastProfileRow.swift in Sources */,
+				BF07D8162FB147D500019F1B /* Date+Formatting.swift in Sources */,
+				BF07D82C2FB14CFA00019F1B /* ColorTagPicker.swift in Sources */,
+				BF07D84B2FB1619100019F1B /* OnboardingView.swift in Sources */,
+				BF07D82E2FB14D1700019F1B /* RadarPulseView.swift in Sources */,
+				BF07D83A2FB14D6500019F1B /* RSSIChartView.swift in Sources */,
+				BF07D8082FB147A000019F1B /* ExportService.swift in Sources */,
+				BF07D8402FB14D9100019F1B /* AddBeaconSheet.swift in Sources */,
+				BF07D84D2FB1619200019F1B /* BeaconRadarView.swift in Sources */,
+				BF07D81A2FB147E000019F1B /* BeaconsTab.swift in Sources */,
+				BF07D8102FB147D200019F1B /* CLProximity+Extensions.swift in Sources */,
+				BF07D8302FB14D1800019F1B /* DiscoveredBeaconRow.swift in Sources */,
+				BF07D8342FB14D5000019F1B /* BeaconFleetViewModel.swift in Sources */,
+				BF07D80A2FB147C100019F1B /* BeaconsProApp.swift in Sources */,
+				BF07D8362FB14D5200019F1B /* BeaconDetailViewModel.swift in Sources */,
+				BF07D81C2FB147E100019F1B /* BroadcastTab.swift in Sources */,
+				BF07D8442FB14DD200019F1B /* BroadcastStatusView.swift in Sources */,
+				BF07D8482FB14DD400019F1B /* BroadcastProfileSheet.swift in Sources */,
+				BF07D8262FB14CF700019F1B /* BeaconSignalBars.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		7AAC02FE22683AC200726A68 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7AAC02FF22683AC200726A68 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7AAC030322683AC300726A68 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7AAC030422683AC300726A68 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7AAC031D22683AC400726A68 /* Debug */ = {
@@ -386,7 +483,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -442,7 +539,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -463,12 +560,12 @@
 				INFOPLIST_FILE = "$(PROJECT_DIR)/$(PROJECT_NAME)/Supporting FIles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Beacons Pro";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.developerzain.beaconspro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -493,12 +590,12 @@
 				INFOPLIST_FILE = "$(PROJECT_DIR)/$(PROJECT_NAME)/Supporting FIles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Beacons Pro";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.developerzain.beaconspro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
