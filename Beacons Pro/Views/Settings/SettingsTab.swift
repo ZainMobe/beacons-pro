@@ -3,6 +3,7 @@ import SwiftData
 
 struct SettingsTab: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(ReviewPromptService.self) private var reviewPrompt
     @AppStorage("autoRecordEncounters") private var autoRecord = true
     @AppStorage("encounterInterval") private var encounterInterval = 5
     @AppStorage("hapticsEnabled") private var hapticsEnabled = true
@@ -73,12 +74,12 @@ struct SettingsTab: View {
         } message: {
             Text("This will permanently delete all encounter history. Saved beacons will not be affected.")
         }
-        .sheet(isPresented: $showExportJSON) {
+        .sheet(isPresented: $showExportJSON, onDismiss: reviewPrompt.promptAtCalmMomentIfEarned) {
             if let data = exportedData {
                 ShareSheet(data: data, fileName: exportFileName)
             }
         }
-        .sheet(isPresented: $showExportCSV) {
+        .sheet(isPresented: $showExportCSV, onDismiss: reviewPrompt.promptAtCalmMomentIfEarned) {
             if let data = exportedData {
                 ShareSheet(data: data, fileName: exportFileName)
             }
@@ -90,6 +91,7 @@ struct SettingsTab: View {
             exportedData = try ExportService.exportBeaconsJSON(from: modelContext)
             exportFileName = "beacons_export.json"
             showExportJSON = true
+            reviewPrompt.record(.dataExported)
         } catch {
             print("Export failed: \(error)")
         }
@@ -100,6 +102,7 @@ struct SettingsTab: View {
             exportedData = try ExportService.exportEncountersCSV(from: modelContext)
             exportFileName = "encounters_export.csv"
             showExportCSV = true
+            reviewPrompt.record(.dataExported)
         } catch {
             print("Export failed: \(error)")
         }

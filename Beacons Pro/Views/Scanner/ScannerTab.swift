@@ -24,6 +24,7 @@ struct ScannerTab: View {
 }
 
 private struct ScannerContentView: View {
+    @Environment(ReviewPromptService.self) private var reviewPrompt
     @Bindable var viewModel: ScannerViewModel
     @State private var showRadar = true
 
@@ -134,6 +135,7 @@ private struct ScannerContentView: View {
                     isSaved: viewModel.isBeaconSaved(beacon),
                     onSave: {
                         _ = viewModel.saveBeacon(beacon)
+                        reviewPrompt.record(.beaconSaved)
                     }
                 )
                 .contextMenu {
@@ -154,6 +156,7 @@ private struct ScannerContentView: View {
                     if !viewModel.isBeaconSaved(beacon) {
                         Button {
                             _ = viewModel.saveBeacon(beacon)
+                            reviewPrompt.record(.beaconSaved)
                         } label: {
                             Label("Save Beacon", systemImage: "square.and.arrow.down")
                         }
@@ -170,7 +173,12 @@ private struct ScannerContentView: View {
 
     private var scanButton: some View {
         Button {
+            let finishedProductiveScan = viewModel.isScanning && !viewModel.discoveredBeacons.isEmpty
             viewModel.toggleScanning()
+            if finishedProductiveScan {
+                reviewPrompt.record(.scanSessionCompleted)
+                reviewPrompt.promptAtCalmMomentIfEarned()
+            }
         } label: {
             HStack(spacing: 8) {
                 Image(systemName: viewModel.isScanning ? "stop.fill" : "play.fill")

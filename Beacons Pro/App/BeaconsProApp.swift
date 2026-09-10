@@ -5,6 +5,7 @@ import SwiftData
 struct BeaconsProApp: App {
     @State private var scannerService = BeaconScannerService()
     @State private var broadcasterService = BeaconBroadcasterService()
+    @State private var reviewPromptService = ReviewPromptService()
 
     let modelContainer: ModelContainer
 
@@ -21,6 +22,8 @@ struct BeaconsProApp: App {
             ContentView()
                 .environment(scannerService)
                 .environment(broadcasterService)
+                .environment(reviewPromptService)
+                .reviewPromptHost()
                 .task {
                     try? ExportService.purgeOldEncounters(olderThan: 30, from: modelContainer.mainContext)
                 }

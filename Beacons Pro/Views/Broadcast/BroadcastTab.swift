@@ -25,6 +25,7 @@ struct BroadcastTab: View {
 }
 
 private struct BroadcastContent: View {
+    @Environment(ReviewPromptService.self) private var reviewPrompt
     @Bindable var viewModel: BroadcastViewModel
     let profiles: [BroadcastProfile]
 
@@ -35,6 +36,7 @@ private struct BroadcastContent: View {
                 if viewModel.isBroadcasting {
                     Button("Stop Broadcasting", role: .destructive) {
                         viewModel.stopBroadcasting()
+                        reviewPrompt.promptAtCalmMomentIfEarned()
                     }
                 }
             }
@@ -61,6 +63,9 @@ private struct BroadcastContent: View {
 
                     Button {
                         viewModel.startQuickBroadcast()
+                        if !viewModel.showError {
+                            reviewPrompt.record(.broadcastStarted)
+                        }
                     } label: {
                         Label("Start Broadcasting", systemImage: "play.fill")
                     }
@@ -80,8 +85,10 @@ private struct BroadcastContent: View {
                             onStart: {
                                 if viewModel.isBroadcasting && viewModel.activeProfile?.persistentModelID == profile.persistentModelID {
                                     viewModel.stopBroadcasting()
+                                    reviewPrompt.promptAtCalmMomentIfEarned()
                                 } else {
                                     viewModel.startBroadcasting(profile: profile)
+                                    reviewPrompt.record(.broadcastStarted)
                                 }
                             }
                         )
