@@ -20,10 +20,10 @@ struct BeaconsProApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .reviewPromptHost()
                 .environment(scannerService)
                 .environment(broadcasterService)
                 .environment(reviewPromptService)
-                .reviewPromptHost()
                 .task {
                     try? ExportService.purgeOldEncounters(olderThan: 30, from: modelContainer.mainContext)
                 }

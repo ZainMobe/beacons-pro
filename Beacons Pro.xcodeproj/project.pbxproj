@@ -19,8 +19,6 @@
 		BF07D8022FB1477800019F1B /* BeaconScannerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8012FB1477800019F1B /* BeaconScannerService.swift */; };
 		BF07D8042FB1479E00019F1B /* BeaconBroadcasterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8032FB1479E00019F1B /* BeaconBroadcasterService.swift */; };
 		BF07D8062FB1479F00019F1B /* HapticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8052FB1479F00019F1B /* HapticsService.swift */; };
-		BF07D9A22FB1600000019F1B /* ReviewPromptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D9A12FB1600000019F1B /* ReviewPromptService.swift */; };
-		BF07D9A42FB1600000019F1B /* ReviewPromptModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D9A32FB1600000019F1B /* ReviewPromptModifier.swift */; };
 		BF07D8082FB147A000019F1B /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8072FB147A000019F1B /* ExportService.swift */; };
 		BF07D80A2FB147C100019F1B /* BeaconsProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8092FB147C100019F1B /* BeaconsProApp.swift */; };
 		BF07D80C2FB147C200019F1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D80B2FB147C200019F1B /* ContentView.swift */; };
@@ -57,6 +55,8 @@
 		BF07D84D2FB1619200019F1B /* BeaconRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D84C2FB1619200019F1B /* BeaconRadarView.swift */; };
 		BF07D84F2FB161D400019F1B /* BeaconContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D84E2FB161D400019F1B /* BeaconContextMenu.swift */; };
 		BF07D8522FB1666600019F1B /* AppStoreScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D8512FB1666600019F1B /* AppStoreScreenshots.swift */; };
+		BF07D9A22FB1600000019F1B /* ReviewPromptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D9A12FB1600000019F1B /* ReviewPromptService.swift */; };
+		BF07D9A42FB1600000019F1B /* ReviewPromptModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07D9A32FB1600000019F1B /* ReviewPromptModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,8 +74,6 @@
 		BF07D8012FB1477800019F1B /* BeaconScannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconScannerService.swift; sourceTree = "<group>"; };
 		BF07D8032FB1479E00019F1B /* BeaconBroadcasterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconBroadcasterService.swift; sourceTree = "<group>"; };
 		BF07D8052FB1479F00019F1B /* HapticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsService.swift; sourceTree = "<group>"; };
-		BF07D9A12FB1600000019F1B /* ReviewPromptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPromptService.swift; sourceTree = "<group>"; };
-		BF07D9A32FB1600000019F1B /* ReviewPromptModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPromptModifier.swift; sourceTree = "<group>"; };
 		BF07D8072FB147A000019F1B /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
 		BF07D8092FB147C100019F1B /* BeaconsProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconsProApp.swift; sourceTree = "<group>"; };
 		BF07D80B2FB147C200019F1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +110,8 @@
 		BF07D84C2FB1619200019F1B /* BeaconRadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconRadarView.swift; sourceTree = "<group>"; };
 		BF07D84E2FB161D400019F1B /* BeaconContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconContextMenu.swift; sourceTree = "<group>"; };
 		BF07D8512FB1666600019F1B /* AppStoreScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshots.swift; sourceTree = "<group>"; };
+		BF07D9A12FB1600000019F1B /* ReviewPromptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPromptService.swift; sourceTree = "<group>"; };
+		BF07D9A32FB1600000019F1B /* ReviewPromptModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPromptModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -575,7 +575,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 5P7HEMT4DQ;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/$(PROJECT_NAME)/Supporting FIles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Beacons Pro";
@@ -585,7 +585,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.developerzain.beaconspro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -605,7 +605,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 5P7HEMT4DQ;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/$(PROJECT_NAME)/Supporting FIles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Beacons Pro";
@@ -615,7 +615,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.developerzain.beaconspro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
